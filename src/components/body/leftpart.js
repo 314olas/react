@@ -1,25 +1,26 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 class LeftPart extends React.Component {
   render(){
     return (
-      <div className="col-3">
+        <div className="col-3">
         <div id="accordion">
           <div className="card">
             <div className="card-header" id="Friends">
               <div className="mb-0 d-flex">
-                <button className="btn btn-link text-dark" data-toggle="collapse" data-target="#Friends" aria-expanded="true" aria-controls="Friends">
+                <Link to="/friends" className="btn btn-link text-dark" data-toggle="collapse" data-target="#Friends" aria-expanded="true" aria-controls="Friends">
                   Friends 
-                </button>
+                </Link>
               </div>
             </div>
           </div>
           <div className="card">
             <div className="card-header" id="Messages">
               <div className="mb-0 d-flex">
-                <button className="btn btn-link text-dark" data-toggle="collapse" data-target="#Messages" aria-expanded="true" aria-controls="Messages">
+                <Link to="/Messages" className="btn btn-link text-dark" data-toggle="collapse" data-target="#Messages" aria-expanded="true" aria-controls="Messages">
                   Messages 
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -34,10 +35,10 @@ class LeftPart extends React.Component {
             <div id="Friends" class="collapse show" aria-labelledby="Games" data-parent="#accordion">
               <div class="card-body">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><button className="btn btn-link">Tetris</button></li>
-                    <li class="list-group-item"><button className="btn btn-link">Mario</button></li>
-                    <li class="list-group-item"><button className="btn btn-link">Counter Strike</button></li>
-                  </ul>
+                    <li class="list-group-item"><Link to="/My-games/tetris" className="btn btn-link">Tetris</Link></li>
+                    <li class="list-group-item"><Link to="/My-games/mario" className="btn btn-link">Mario</Link></li>
+                    <li class="list-group-item"><Link to="/My-games/Counter-Strike" className="btn btn-link">Counter Strike</Link></li>
+                </ul>
               </div>
             </div>
           </div>
